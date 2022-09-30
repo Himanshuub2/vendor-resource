@@ -8,7 +8,7 @@ import multer from "multer";
 import path from "path"
 import {fileURLToPath} from "url"
 // import { dirname } from "path";
-
+dotenv.config();
 
 const port = process.env.PORT || 4000;
 const app = express();
@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({extended:true}))
 
 
 //DB connection 
-dotenv.config();
+
 const username = process.env.DB_USERNAME;
 const password = process.env.DB_PASSWORD;
 Connection(username,password);
